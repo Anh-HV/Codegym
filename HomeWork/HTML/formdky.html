@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        font-family: Tahoma;
+        color: white;
+        width: 1000px;
+    }
+    .dc{
+        border: 5px lightseagreen;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-top: auto;
+        width: 500px;
+        background: linear-gradient(wheat,gold,orange);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .dc .dv2 {
+        text-align: center;
+    }
+    .dc .dv2 input{
+        background: linear-gradient(black,gold,black);
+        border: 5px solid black;
+        color: white;
+        border-radius:50%;
+    }
+</style>
+<body>
+<div class="dc">
+<h2 style="background: black;width: 500px;text-align: center ">ĐĂNG KÝ HỌC VIÊN</h2>
+<form>
+<table>
+    <tr>
+        <td><label>Họ Tên:</label></td>
+        <td colspan="2"><input type="text" name="namehv"/></td>
+    </tr>
+    <tr>
+        <td><label>Ngày Sinh:</label></td>
+        <td colspan="2"><input type="date" name="birthday"/></td>
+    </tr>
+    <tr>
+        <td><span>Giới tính:</span></td>
+        <td>
+            <input type="radio" value="gender" name="boy"/>
+            <label>Nam</label>
+            <input type="radio" value="gender" name="girl">
+            <label>Nữ</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label>Địa chỉ:</label></td>
+        <td><textarea name="address" cols="20px" rows="3" ></textarea></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><span>Lớp:</span></td>
+        <td colspan="2">
+            <select name="class">
+                <option value="1">php</option>
+                <option value="2">java</option>
+                <option value="3">python</option>
+                <option value="4">react native</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td colspan="2"><input type="email"  name="email"></td>
+    </tr>
+    <tr>
+        <td>Điện thoại:</td>
+        <td colspan="2"><input type="number" value="number" name="number"></td>
+    </tr>
+</table>
+    <div class="dv2">
+        <input  type="submit" value="submit">
+        <input  type="reset" value="reset">
+    </div>
+
+</form>
+</div>
+</body>
+</html>

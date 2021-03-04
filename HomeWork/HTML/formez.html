@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formez</title>
+</head>
+<style>
+    body{
+        background: aqua;
+        width: 1000px;
+        height: 1000px;
+    }
+    .dv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 5px solid coral;
+        border-radius: 20px;
+    }
+</style>
+<body>
+<div style="background: aliceblue;width: 500px; height:300px;align-items: center;text-align: center;left: 50%" class="dv"   >
+    <h1 style="background: coral;color: aliceblue;width: 500px;margin-top: 0px">SỞ THÍCH CỦA BẠN</h1>
+    <form action="formez.html" method="post" >
+        <span style="color: blue">Họ và tên:</span>
+        <input name="name" type="text">
+        <span style="padding-right: 26px;color: blue"></br>email:</span>
+        <input name="email" type="text"></br>
+        <table style="text-align: center">
+            <tr>
+                <Td><span style="color: blue">Sở thích:</span></Td>
+            </tr>
+        <tr>
+            <td><input type="checkbox" value="Thể thao" name="cb">Thể thao</td>
+            <td> <input type="checkbox" value="Âm nhạc"name="cb">Âm nhạc</td>
+            <td> <input type="checkbox" value="Chơi game"name="cb">Chơi game</td>
+        </tr>
+        <tr>
+            <td> <input type="checkbox" value="Đọc sách "name="cb">Đọc sách</td>
+            <td> <input type="checkbox" value="Lưới web"name="cb">Lưới web</td>
+            <td>  <input type="checkbox" value="Du lịch"name="cb">Du lịch</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="Điện ảnh"name="cb">Điện ảnh</td>
+        </tr>
+        </table>
+        <button type="submit" >Submit</button>
+        <input type="reset" value="reset"/>
+        </table>
+    </form>
+</div>
+</body>
+</html>
