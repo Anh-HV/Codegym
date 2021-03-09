@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#result" method="get">
+        <table>
+            <tr>
+                <th>Caculator</th>
+               
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input id="value1" type="number">
+                </td>
+                <td colspan="2"> 
+                    <input id="value2" type="number"> =
+                </td>
+                <td colspan="3"> <span id=result></span></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="clicked1();">Addition(+)</button>
+                </td>
+                <td>
+                    <button onclick="clicked2();"> Subtraction(-)</button>
+                </td>
+                <td>
+                    <button onclick="clicked3();">Multiplication(X)</button>
+                </td>
+                <td>
+                    <button onclick="clicked4();">Division(/)</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function clicked1(){
+            var a =document.getElementById("value1").value;
+            var b = document.getElementById("value2").value;
+            a=parseInt(a);
+            b=parseInt(b);
+            document.getElementById("result").innerHTML=a+b;
+        }
+        function clicked2(){
+            var a =document.getElementById("value1").value;
+            var b = document.getElementById("value2").value;
+            a=parseInt(a);
+            b=parseInt(b);
+            document.getElementById("result").innerHTML=a-b;
+        }
+        function clicked3(){
+            var a =document.getElementById("value1").value;
+            var b = document.getElementById("value2").value;
+            a=parseInt(a);
+            b=parseInt(b);
+            document.getElementById("result").innerHTML=a*b;
+        }
+        function clicked4(){
+            var a =document.getElementById("value1").value;
+            var b = document.getElementById("value2").value;
+            a=parseInt(a);
+            b=parseInt(b);
+            document.getElementById("result").innerHTML=a/b;
+        }
+    </script>
+</body>
+</html>

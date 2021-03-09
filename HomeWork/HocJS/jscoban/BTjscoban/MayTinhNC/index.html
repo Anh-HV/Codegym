@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style=>    
+        <div class="classCL" >
+            <form action="#result" method="get">
+                <table class="tbcl">
+                    <tr><input id="demo" type="text" class="inputrs"></tr>
+                    <tr>
+                        <td><button id="logic1" class="btnl" type="button"  onclick="clickedAc()">AC</button></td>
+                        <td><button id="logic2"  class="btnl" type="button" value="negative" onclick="operator('-')">+/-</button></td>
+                        <td><button id="logic3"  class="btnl" type="button" value="percent" onclick="operator('%')">%</button></td>
+                        <td><button id="logic4"  class="btnm" type="button"  value="/" onclick="operator('/')">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="number7"  class="btn" type="button" value="7" onclick="clicked(7);">7</button></td>
+                        <td><button id="number8"  class="btn" type="button" value="8" onclick="clicked(8);">8</button></td>
+                        <td><button id="number9"  class="btn" type="button" value="9" onclick="clicked(9);">9</button></td>
+                        <td><button id="logic5"  class="btnm" type="button" value="multiple" onclick="operator('*')">X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="number4"  class="btn" type="button" value="4" onclick="clicked(4);">4</button></td>
+                        <td><button id="number5"  class="btn" type="button" value="5" onclick="clicked(5);">5</button></td>
+                        <td><button id="number6"  class="btn" type="button" value="6" onclick="clicked(6);">6</button></td>
+                        <td><button id="logic6"  class="btnm" type="button"value="subtract" onclick="operator('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="number1"  class="btn" type="button"value="1" onclick="clicked(1);">1</button></td>
+                        <td><button id="number2"  class="btn" type="button"value="2" onclick="clicked(2);">2</button></td>
+                        <td><button id="number3"  class="btn" type="button"value="3" onclick="clicked(3);">3</button></td>
+                        <td><button id="logic7"  class="btnm" type="button"value="plus" onclick="operator('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="number0" value="0" onclick="clicked(0);"  class="btn" type="button" style="width: 10em;" >0</button></td>
+                        <td><button id="logic8"class="btn" type="button">,</button></td>
+                        <td><button id="logic9"class="btnm" type="button" onclick="total()">=</button></td>
+                    </tr>
+                </table>
+               
+            </form>
+        </div>
+    </div>
+    <script>
+        function clicked(number){
+            document.getElementById("demo").value +=number;
+        }
+        function operator(op){
+            document.getElementById("demo").value +=op;
+        }
+
+        function total(){
+            let a =document.getElementById("demo").value;
+          
+            document.getElementById("demo").value=eval(a);
+        }
+        function clickedAc()
+        {
+             document.getElementById("demo").value = '';
+        }
+    
+    </script>
+</body>
+</html>
