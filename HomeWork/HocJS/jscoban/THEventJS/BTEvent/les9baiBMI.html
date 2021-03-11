@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="weight_hm">Cân nặng:</label>
+    <input id="weight_hm" type="number" name="weight_hm" placeholder="Kg">
+    <label for="height_hm">Chiều cao:</label>
+    <input id="height_hm" type="number" name="height_hm" placeholder="M">
+    <button  onclick="clicked();" >Tinh </button>
+    <script>
+        function clicked(){
+        var weightHm =parseFloat(document.getElementById("weight_hm").value);
+        var heightHm =parseFloat(document.getElementById("height_hm").value);
+        var bmi=(weightHm/(heightHm*2));
+            
+         if (bmi<18.5)   document.write("Underweight");
+         else if(bmi<25.0) document.write("Normal");
+         else if(bmi <30.0) document.write("Overweight");
+         else document.write("Obese");
+        }
+       
+    </script>
+</body>
+</html>
