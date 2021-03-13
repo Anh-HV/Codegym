@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Bai 2:</h1>    
+        <input type="number" id="b2">
+        <button onclick="clickedb2();" >Tinh tong tu 1 den so nhap:</button>    
+        <p id="result_b1"></p>
+    </div>
+    <script>
+        function clickedb2(){
+           var a =parseInt( document.getElementById("b2").value);
+           let total=0;
+           for(let i = 0; i <a;i++){
+               total+=+i;
+           }
+           alert("Tong"+" " +a+" "+"so dau tien la: "+" "+total)
+        }
+        for(let i=0; i<6;i++){
+            document.write("The number is" +" "+i +"</br>");
+        }
+    </script>
+</body>
+</html>

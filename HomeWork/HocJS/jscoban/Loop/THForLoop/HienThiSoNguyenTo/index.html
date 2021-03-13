@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num =parseInt(prompt("Nhap so luong so nguyen to"," "));
+        for(let i=2;i<num;i++){
+            if(checknt(i)){
+                console.log(i);
+            }
+        }
+
+     function checknt(num) {
+        for( i=2;i<num;i++)
+        {
+            if (num %i == 0)  return false;  
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>
