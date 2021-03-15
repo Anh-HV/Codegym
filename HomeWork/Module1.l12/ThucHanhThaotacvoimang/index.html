@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> Sample Screen</h1>
+        <input type="text" id="txtValue">
+        <button id="add">Add</button>
+        <button id="dp">Display</button>
+        <div id="result" ></div>
+    </div>
+    <script>
+        let a=0;
+
+        let arr =Array();
+        var x = document.getElementById("add");
+        var y = document.getElementById("dp");
+        x.addEventListener("click",clickedAdd);
+        y.addEventListener("click",clickedDp);
+        function clickedAdd() {
+            arr[a] =document.getElementById("txtValue").value;
+            alert("Element"+arr[a]+"Added at index"+a);
+            a++;
+            document.getElementById("txtValue").value='';
+        }
+        function clickedDp() {
+            let e = "<hr/>";
+         for (let i = 0; i < arr.length; i++) {
+         e += "Element " + i + " = " + arr[i] + "<br/>";
+              }
+         document.getElementById("result").innerHTML = e;
+        }
+    </script>
+</body>
+</html>

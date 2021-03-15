@@ -71,4 +71,33 @@ function clickedb6() {
         if(count==30) break;
     }
 }
+function clickedb7() {
+    let total=" ";
+    for(let i=0;i<100;i++){
+       if(i%3==0){
+        document.getElementById('bai7').innerHTML+="Fizz" +" " ;
+       }
+       else if(i%5==0)
+       document.getElementById('bai7').innerHTML+="Buzz" +" ";
+        else{
+            document.getElementById('bai7').innerHTML+=i +" ";
+        }
+    }      
+}
+function clickedb8() {
+    let a = prompt("Nhap gia tri tu 0 den :","0->");
+    let randomnb= Math.floor(Math.random()*a);
+   // alert(randomnb);
+      for(let i=0;i<3;i++){
+        let b =prompt("Nhap so ban muon:","");
+        if(b==randomnb){
+            alert("Ban da doan dung");
+            break;
+        }
+        else {
+            alert("Ban da doan sai-Hay thu lai >_<")
+        }
+    }
+    alert("Dap an la:"+ randomnb)
+}
  
