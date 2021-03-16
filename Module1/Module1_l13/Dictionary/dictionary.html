@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search_Words">
+    <button onclick="btsearch();">Find</button>
+    <p id="resultword">as</p>
+    <script>
+        function btsearch() {
+        var arrEn = ["Cat","Dog","Monkey","Bird","Owl","Tiger"];
+        var arrVn = ["Meo","Cho","Khi","Chim","Cu","Ho"];
+        let words_search = document.getElementById("search_Words").value;
+        let index=null;
+        for(let i=0;i<arrEn.length;i++) {
+            if(words_search==arrEn[i]) index = i;
+        }
+        console.log(index)
+        index=null ? document.getElementById("resultword").innerHTML="Khong tim thay" :
+          document.getElementById("resultword").innerHTML=arrVn[index];
+        }
+    </script>
+</body>
+</html>
