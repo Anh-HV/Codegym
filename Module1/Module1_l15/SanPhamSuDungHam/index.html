@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <Style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        #container{
+            background:gainsboro;
+            min-height: 200px;
+            width: 400px;
+            margin-left: 35%;
+            margin-top:10%;
+            border:1px solid gainsboro;
+            border-radius:10%
+        }
+        button{
+            color: white;
+            background:rgb(47, 255, 116);
+            font-size: 30px;
+            border-radius:10px;
+            box-shadow:bisque;
+            border:none;
+            
+        }
+        input{
+            height:25px;
+            padding-top:10px;
+            font-size: 20px;
+        }
+        td{
+            font-size:30px
+        }
+        #btdEdit{
+            background:yellow;
+        }
+        #btdRemove{
+            background:red;
+        }
+    </Style>
+<body>
+    <div id="container">
+        <div>
+            <h1>Add New Product</h1>
+            <input id="product" type="text" placeholder="New Product"> 
+            <button id="btnAdd" onclick='addProduct();'>Add</button> 
+            <h1>Display All Product</h1>
+        </div>
+        <div id="result"> </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

@@ -12,9 +12,15 @@
     </style>
 </head>
 <body>
-    <input type="number" id="covert">
     <script>
-       
+       function footToMeter(foot){
+           return foot*0.375;
+       }
+       function meterToFoot(meter){
+           return meter*3.279;
+       }
+       console.log(footToMeter(50));
+       console.log(meterToFoot(50));
     </script>
 </body>
 </html>
