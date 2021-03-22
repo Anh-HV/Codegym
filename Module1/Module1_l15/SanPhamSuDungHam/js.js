@@ -16,24 +16,28 @@ function displayProduct() {
 
     document.getElementById("product").value="";
 }
-displayProduct(arr);
+
+displayProduct();
+
 function addProduct() {
     let newProduct = document.getElementById("product").value;
     if(newProduct == ""){
         console.log("Please enter a product")
-    }
-    else{
+    } else{
     arr.push(newProduct);
     console.log("Add "+ newProduct + " successful")
-    displayProduct(arr);
+    displayProduct();
     }
 }
 function removeProduct(index) {
-    arr.splice(index,1);
-    displayProduct(arr);
+    var r = confirm("Are you sure you want to delete");
+    if(r==true){
+        arr.splice(index,1);
+        displayProduct(arr);
+    }
 }
 function editProduct(index){
     let value = prompt("Change product to");
     arr[index] = value;
-    displayProduct(arr);
+    displayProduct();
 }

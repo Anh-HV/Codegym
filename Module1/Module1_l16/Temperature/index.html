@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        class Temperature{
+            constructor(Celsius) {
+                this.Celsius = Celsius ;
+            }
+            getFahrenheit () {
+                return (this.Celsius*1.8)+32 +"F"; 
+            }
+            getKenvin() {
+                return (this.Celsius+273.15) +" K";
+            }
+        }
+        let tem = new Temperature(25);
+        console.log(tem.Celsius+"C"+"="+ tem.getFahrenheit());
+        console.log(tem.Celsius+"C"+"="+tem.getKenvin());
+    </Script>
+</body>
+</html>

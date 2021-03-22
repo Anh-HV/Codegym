@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+    
+<body>
+    <canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+        <p id="result"></p>
+    <script>
+        class Rectangle{
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            getPerimeter() {
+                return (this.width+this.height)*2;
+            }
+            getArea() {
+                return (this.width*this.height);
+            }
+            displayRectangle() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.strokeStyle = "aqua";
+            ctx.lineWidth = "10";
+            ctx.rect(20, 20, this.width, this.height);
+            ctx.stroke();
+            }
+            displayline() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.lineCap = "round";
+            ctx.moveTo(150, 150);
+            ctx.lineTo(20, 25);
+            ctx.stroke();
+            }
+        }
+        let rec = new Rectangle(200,100);
+        rec.displayRectangle();
+        rec.width =100;
+        rec.height =200;
+        rec.displayRectangle();
+        rec.displayline();
+        let result = document.getElementById("result").innerHTML="Perimeter: "+rec.getPerimeter()+" Area: "+ rec.getArea();
+    </script>
+</body>
+</html>

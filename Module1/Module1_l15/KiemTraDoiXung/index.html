@@ -12,17 +12,17 @@
         function checkNumber() {
             let str = prompt("Enter a string");
             function isPalindrome(str){
-            let array = [];
-            for(let i=0;i<str.length;i++){
-                array[i] = str[i];
+                let array = [];
+                for(let i=0;i<str.length;i++){
+                    array[i] = str[i];
+                }
+                let array2 = array.reverse();
+                let strRev = array2.join("");
+                if(str.localeCompare(strRev) == 0) {
+                    return true;
+                }
+                else return false;
             }
-            let array2 = array.reverse();
-            let strRev = array2.join("");
-            if(str.localeCompare(strRev) == 0) {
-                return true;
-            }
-            else return false;
-        }
         console.log(isPalindrome(str))
         }
     </script>
