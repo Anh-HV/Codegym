@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        class SwitchButton {
+            constructor() {
+                this.status = false;
+                this.lamp = ElectricLamp;
+            }
+    
+            switchButton() {
+                if (this.status) {
+                    this.status = false;
+                } else this.status = true;
+            }
+            switchOff(){
+                this.status = false;
+                this.lamp.turnOff();
+            }
+            switchOn(){
+                this.status = true;
+                this.lamp.turnOn();
+            }
+            conectToLamp(lamp){
+                this.lamp = lamp;
+            }
+    
+        }
+        class ElectricLamp{
+            constructor() {
+                this.status = false;
+            }
+    
+            checkLightning(){
+                if(this.status == true){
+                    alert("Lamp is lightning")
+                }
+            }
+            turnOn(){
+                return this.status = true;
+            }
+            turnOff(){
+                return this.status = false;
+            }
+        }
+        let switchButton = new SwitchButton();
+        let electricLamp = new ElectricLamp();
+        switchButton.conectToLamp(electricLamp);
+        switchButton.switchOn();
+        console.log(switchButton.status)
+        electricLamp.checkLightning();
+        switchButton.switchOff();
+    
+            
+        </Script>
+    </body>
+    </html>
+</body>
+</html>

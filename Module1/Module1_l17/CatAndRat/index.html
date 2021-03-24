@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        class Rat{
+            constructor(name,weight,speed){
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed;
+                this.alive = true;
+                this.sout = "Chit chit";
+            }
+            soutt(){
+                return this.sout;
+            }
+            checkAlive() {
+               return this.alive;
+            }
+            setWeight() {
+                this.weight =weight;
+            }
+        }
+        class Cat{
+            constructor(name,weight,speed,max_speed){
+                this.name = name;
+                this.weight = weight;
+                this.speed =speed ++;
+                this.max_speed = max_speed;
+                this.sout = "Meo meo"
+            }
+            catch(obj) {
+                if(this.max_speed >obj.speed){
+                    console.log("Bat dc " +obj.name)
+                    return true;
+                }
+                else{console.log("Khong bat duoc")
+                return false;
+                }
+            }
+           
+            eat(obj) {
+                if(obj.checkAlive() ){
+                    this.weight+=obj.weight;
+                    obj.weight =0;
+                   return obj.alive = false;
+                }
+                else{console.log("Khong an duoc"); return;}
+            }
+        }
+        let rat = new Rat("rat",5,5);
+        let rat1 = new Rat("rat",5,5);
+        let cat = new Cat("cat",5,3,7);
+        console.log(cat)
+        console.log(rat)
+        console.log(rat1)
+        cat.catch(rat)
+        cat.eat(rat);
+        console.log (rat.weight)
+        
+    </Script>
+</body>
+</html>

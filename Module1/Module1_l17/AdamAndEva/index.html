@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam-Eva</title>
+</head>
+<body>
+    <Script>
+        class Apple{
+            constructor() {
+                this.weight=10;
+            }
+            decrease() {
+                this.weight --;
+            }
+            isEmpty() {
+                return this.weight = 0;
+            }
+            getWeight() {
+                this.weight =weight
+            }
+        }
+        class Human{
+            constructor(name,gender,weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+                this.string=""
+            }
+            isMale() {
+                if(this.gender ==true){
+                    console.log(this.name+" is boy")
+                }
+                else{
+                     console.log(this.name+" is girl")
+                }
+            }
+            setGender(boolean) {
+                return this.gender;
+            }
+            checkApple(apple){
+                return apple.weight;
+            }
+            eat() {
+                if(this.checkApple(apple)) {
+                    apple.decrease();
+                    this.weight++;
+                    console.log(this.name+": an tao");
+                }
+                else{
+                    console.log("Het tao roi")
+                }
+            }
+            say(str) {
+               return  this.string=str;
+            }
+            getName() {
+                 this.name;
+            }
+            setName(str){
+                return this.name=str;   
+            }
+            getWeight() {
+               return this.weight;
+            }
+            setWeight() {
+                this.weight = weight;
+            }
+        }
+        let apple = new Apple();
+        let adam = new Human("Adam",true,10);
+        let eva = new Human("Eva",false,10);
+        console.log(apple)
+        console.log(adam)
+        console.log(eva);
+        // eva.isMale();
+        // adam.isMale();
+        // console.log(adam.say("hello"))
+        adam.eat();
+        adam.eat();
+        adam.eat();
+        eva.eat();
+        adam.eat();
+        eva.eat();
+        adam.eat();
+        eva.eat();
+        adam.eat();
+        eva.eat();
+        adam.eat();
+        eva.eat();
+        console.log(adam);
+        
+        // for(let i=0;i<=apple.getWeight();i++){
+            
+        //     console.log("Human eat " +i+" apple")
+        // }
+    </Script>
+</body>
+</html>
